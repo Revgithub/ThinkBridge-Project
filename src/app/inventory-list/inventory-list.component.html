@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      
+    <button  [routerLink]="['/Add-Product',username]" type="button" class="btn btn-primary mybtn"><i class="fa fa-plus" aria-hidden="true"></i>ADD</button>
+  </div>
+  </div>
+   
+    <div class="row">
+       <div class="col-md-4 item" *ngFor=" let  list of Product_list;let i = index">
+        <div class="card item-card card-block">
+          <h4 class="card-title text-right"><i class="fa fa-pencil-square-o" (click)="update(list);" aria-hidden="true"></i> <i style="font-size:24px" class="fa" (click)="delete(list);">&#xf014;</i></h4>
+            <img class="card-img-top" [src]="list.imgUrl" alt="Card image">
+            <div class="card-body">
+                <div class="headings">
+                    <h5 class="item-card-title mt-3 mb-3">{{list.name}}</h5>
+                    <p class="card-text">$ {{list.price}}.</p>
+      
+                </div>
+              
+              <h5>Type:Clothing</h5>
+              
+              <!-- <a href="#" class="btn btn-primary">Details</a> -->
+            </div>
+          </div>
+       </div> 
+       <br/>
+    </div>
+   
+</div>
+
